@@ -72,6 +72,10 @@ def webhook():
                         elif state[sender_id] == 2:
                             send_message(sender_id, msg_spend[language[sender_id]] )
                             state[sender_id] = 3
+                            
+                        elif state[sender_id] == 3:
+                            send_message(sender_id, msg_great_day[language[sender_id]] )
+                            state.pop(sender_id, None)
                         
                         else:
                             send_message(sender_id, msg_great_day[language[sender_id]] )
