@@ -48,7 +48,7 @@ def webhook():
                     if sender_id not in state:
                     
                         # First message
-                        send_message(sender_id, "Hi)
+                        send_message(sender_id, "Hi!")
                         send_message(sender_id, msg_start )
                         state[sender_id] = 1
                     else:
